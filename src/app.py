@@ -1,11 +1,12 @@
-
 from flask import Flask, jsonify, request
 import requests
 from bs4 import BeautifulSoup
 import json
 from werkzeug.exceptions import HTTPException
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Initialize global soup object to prevent multiple requests
 URL = "http://donboscoberhampore.in/"
